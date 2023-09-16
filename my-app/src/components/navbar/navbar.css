@@ -1,0 +1,160 @@
+* {
+  box-sizing: 0;
+}
+body {
+  /* background-color: #141414; */
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.nav {
+  background-color: #121212;
+  height: 4rem;
+  padding-left: 2rem;
+  display: flex;
+  align-content: center;
+  width: 100%;
+}
+
+#nav1{
+  margin-left: 10%;
+}
+.ul-item{
+  gap: 0 3rem;
+
+}
+  .ul-item:hover .items {
+    filter: blur(2px);
+    transition: 0.5s;
+  }
+  .ul-item:hover .items:hover {
+    filter: blur(0px);
+    scale: 103%;
+  }
+
+.nav img {
+  justify-content: end;
+  float: right;
+}
+.nav ul {
+  display: flex;
+  width: 100%;
+}
+.nav li {
+  list-style: none;
+  align-items: center;
+  display: flex;
+}
+.nav li a {
+  text-decoration: none;
+  padding-right: 1.5rem;
+  color: #e7a0db;
+  font-size: 1.5rem;
+}
+
+
+.img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5rem;
+  float: right;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+.title a {
+  font-size: 1.5rem;
+  line-height: 100%;
+  color: #ebbae3;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.profile-pic {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+}
+.profile-pic:hover {
+  transition: 0.5s;
+  scale: 110%;
+}
+.toggle-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30px;
+  width: 40px;
+}
+.toggle-btn span {
+  height: 3px;
+  width: 100%;
+  background-color: #ebbae3;
+  border-radius: 10px;
+}
+
+/* ******************************************************mobile**************************************************** */
+@media (max-width: 500px) {
+  .nav {
+    flex-direction: column;
+    height: 100%;
+  }
+  .title {
+    margin-top: 1rem;
+    padding-bottom: 2%;
+    border-bottom: 2px solid #e7a0db;
+    margin-left: -1rem;
+  }
+  .title a {
+    font-size: 2rem;
+  }
+  .nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navUL li {
+    padding: 1rem;
+    margin-left: -2rem;
+    width: 100%;
+    text-align: center;
+  }
+  .img {
+    width: 100%;
+    padding-left: 3.2rem;
+    justify-content: start;
+    margin-left: -2rem;
+  }
+  .toggle-btn {
+    display: flex;
+  }
+  .toggle {
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 52px;
+    background-color: red;
+    border-radius: 30px;
+    border: 2px solid gray;
+  }
+  .nav:hover .items {
+    filter: blur(0px);
+  }
+
+  .ul-item:hover .items {
+    filter: blur(3px);
+    transition: 0.5s;
+  }
+  .ul-item .items:hover {
+    filter: blur(0px);
+    scale: 103%;
+  }
+  
+}

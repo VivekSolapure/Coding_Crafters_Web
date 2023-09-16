@@ -1,0 +1,99 @@
+
+.video{
+    width: 100px;
+    height: 100px;
+  }
+
+
+
+/* margin : t,r,b,l
+body{
+background-color: #fff;
+}
+
+.cardDiv{
+    margin-left: 50px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #000000;
+    margin-top: 9rem;
+    align-items: center;
+    overflow-wrap:unset;
+    display: flex;
+    flex-direction: column;
+    
+}
+.cardImg{
+    position: relative;
+    width: 125.067px;
+    margin: 0;
+    border: 10px solid;
+    height: 130.296px;
+    border-radius: 130.296px;
+    background-color: #7e8040;
+    z-index: 1;
+}
+img{
+    width: 125.067px;
+    height: 130.296px;
+    border-radius: 130.296px;    
+}
+.IncardDiv{
+    background-color: #454444;
+    position: relative;
+    border-radius: 1rem;
+    width: 280px;
+    margin: -60px auto auto auto;
+    display: flex;
+    flex-direction: column;
+    height: 249.7px;
+}
+.IncardDiv:hover .underline{
+    animation: line 1.25s linear forwards;
+}
+@keyframes line {
+    from {
+      left:50%;
+      width:0%;
+    }
+    to {
+      left:5%;
+      width:90%;
+    }
+}  
+.infoDiv{
+    position: relative;
+    text-align: center;
+    margin-top: 45px;
+    color: white;
+    line-height: 0px;
+    
+}
+
+h3{
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Aboreto', cursive;
+    line-height: 30px;
+}
+#name{
+    margin-top: 2%;
+}
+.underline{
+  position:absolute;
+  width:0%;
+  text-align:center;;
+
+}
+.underline1{
+    padding: 0px 30px 0px 30px;
+}
+.mem{
+    display:flex;
+    flex-direction: row;
+    width: 1387;
+    background-color: #ed0000;
+} */
