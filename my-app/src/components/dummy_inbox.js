@@ -1,9 +1,12 @@
-import { useState, createContext } from "react";
-import { database } from "../firebase";
-import "./dummy_inbox.css";
 
-const MyContext = createContext();
-export default function Dummyinbox({ children }) {
+import { useState } from "react";
+import { database, storage } from "../firebase";
+import "./dummy_inbox.css";
+import 'firebase/storage';
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
+
+export default function Dummyinbox() {
+
   const [Post_textarea, setPost_textarea] = useState("");
   const TxtChange = (event) => {
     setPost_textarea(event.target.value);
@@ -13,29 +16,54 @@ export default function Dummyinbox({ children }) {
   const TxtTitle = (event) => {
     setPost_txtTile(event.target.value);
   };
-  const postData = () => {
-    let time= Date.now();
 
-    if((Post_textarea,Post_txtTitle)!==""){
-      // database.ref().child("Post").push(Post_textarea);
-      // database.ref().child("Post").push(Post_txtTitle);
-        database.ref("posts").child(time).set({
-          Title: Post_txtTitle,
-          Para: Post_textarea
-        })
-        console.log(time);
-    }
-    else{
+  const [ImgUpload, setImgUpload] = useState([])
+  const [uploadstatus, setuploadstatus] = useState(false)
+  const [uploadno, setuploadno] = useState('')
+  const [lengths, setlength] = useState('')
+  let URLS = []
+  
+  const postDatas = async () => {
+    if (((Post_txtTitle || Post_textarea) === '') || (ImgUpload.length === 0)) {
+      alert("Please Fill all ");
+      if (window.confirm) {
+        window.location.reload()
+      }
+    } else {
+      setlength(ImgUpload.length)
+
+      for (let i = 0; i < ImgUpload.length; i++) {
+        setuploadno(i + 1)
+        const imgref = ref(storage, `Images/${ImgUpload[i].name}`)
+        await uploadBytes(imgref, ImgUpload[i])//For uploading (kuta upload,kai upload)
+          .then(async (snapshot) => {//  "snapshot" tyat sagala astay [items,prefixes,extra]
+            await getDownloadURL(snapshot.ref)//url download karaylo ref cha, ref kai ahe tar "ImageUrls/"
+              .then((url) => {//snapshot madla url
+                URLS.push(url)
+
+              })
+          });
+      }
+      let time = Date.now();
       database.ref("posts").child(time).set({
-        Title: "Post_txtTitle",
-        Para: "Post_textarea"
+
+        Title: Post_txtTitle,
+        Para: Post_textarea,
+        IImages: URLS
       })
-    }
-  };
+    }    
+  }
+
+  const status = () => {
+    setuploadstatus(!uploadstatus)
+  }
+  const posthandler = () => {
+    postDatas();
+    status()
+  }
 
   return (
-    <MyContext.Provider value={{ Post_textarea, setPost_textarea }}>
-      {children}
+    <>
       <div className="postUpload_body">
         <div className="postUpload_container">
           <textarea
@@ -56,14 +84,25 @@ export default function Dummyinbox({ children }) {
             <img
               className="postUpload_img"
               src="./tabler_photo-up.svg"
-              alt=""
+              alt="/"
             />
-            <button className="postUploadbtn" onClick={postData}>
+            <input type="file" multiple onChange={(event) => { setImgUpload(event.target.files) }} />
+            <button className="postUploadbtn" onClick={posthandler}>
               Post
             </button>
           </div>
+          {uploadstatus && (
+            <div>
+              {uploadno <= lengths ? (
+                <p>Uploaded...{uploadno}/{lengths}</p>
+              ) : (
+                <p>Uploaded All</p>
+              )}
+            </div>
+          )}
         </div>
       </div>
-    </MyContext.Provider>
+    </>
   );
+
 }

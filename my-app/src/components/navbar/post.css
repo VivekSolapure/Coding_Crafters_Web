@@ -81,13 +81,7 @@
     padding: 0 50px;
   }
   
-  .Pslide-imgs {
-    width: 400px;
-    height: 300px;
-    border: 10px solid #e7a0db;
-    border-radius: 2rem;
-    animation: 2s fade;
-  }
+
   
   @keyframes fade {
     from {
@@ -96,6 +90,31 @@
     to {
       opacity: 100%;
     }
+  }
+  /* .Pproduct-container{
+    background-color: #ce0000;
+    overflow: auto;
+    width: 420px;
+    height: 100%;
+    display: flex;
+    scroll-behavior: smooth;
+
+  } */
+  /* .image-slider{
+    display: flex;
+    background-color: #000000;
+    align-items: center;
+    overflow-wrap: unset;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+  } */
+  .Pslide-imgs {
+    width: 400px;
+    height: 300px;
+    border: 10px solid #e7a0db;
+    border-radius: 2rem;
+    animation: 2s fade;
   }
   
   .Ppre-btn,

@@ -30,10 +30,13 @@ const Navbar = (props) => {
                   </li>
                   <li className="items">
                     <Link className="items" to="/inbox">{props.inbox}</Link>
-                  </li> 
+                  </li>     
                   <li className="items">
-                    <Link className="items" to="/file2">file2</Link>
-                  </li>                
+                    <Link className="items" to="/test1">Test1</Link>
+                  </li>    
+                  <li className="items">
+                    <Link className="items" to="/test2aa">Test2</Link>
+                  </li>         
                 </ul>
               </div>
             </>
