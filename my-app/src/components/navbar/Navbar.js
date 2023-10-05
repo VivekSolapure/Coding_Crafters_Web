@@ -25,12 +25,12 @@ const Navbar = (props) => {
             <>
               <div className={`navUL ${togbtn?'animate': ''}`} id="nav1">
                 <ul className="ul-item">
+                <li className="items">
+                    <Link className="items" to="/">Home</Link>
+                  </li> 
                   <li className="items" >
                     <Link to="./post"> {props.post}</Link>
-                  </li>
-                  <li className="items">
-                    <Link className="items" to="/inbox">{props.inbox}</Link>
-                  </li>     
+                  </li>                       
                   <li className="items">
                     <Link className="items" to="/test1">Test1</Link>
                   </li>    
@@ -55,13 +55,9 @@ const Navbar = (props) => {
 export default Navbar;
 Navbar.proptype = {
   Title: PropTypes.string.isRequired,
-  community: PropTypes.string.isRequired,
   post: PropTypes.string.isRequired,
-  inbox: PropTypes.string.isRequired,
 };
 Navbar.defaultProps = {
   Title: "Coding Crafters",
-  community: "Community",
   post: "Post",
-  inbox: "Inbox",
 };
