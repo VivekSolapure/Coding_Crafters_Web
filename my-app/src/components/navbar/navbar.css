@@ -2,78 +2,71 @@
   box-sizing: 0;
 }
 body {
-  /* background-color: #141414; */
   margin: 0;
   padding: 0;
-  background-color: #403A3A;
+  background-color: #010409;
+  width: fit-content;
+  /* overflow-x: hidden; */
 }
-
+.nav-container{
+  width: 100%;
+}
 .nav {
-  background-color: #121212;
-  height: 4rem;
-  padding-left: 2rem;
   display: flex;
-  align-content: center;
-  /* width: 100%; */
-}
-
-#nav1{
-  margin-left: 10%;
-}
-.ul-item{
-  gap: 0 3rem;
-
-}
-  .ul-item:hover .items {
-    filter: blur(2px);
-    transition: 0.5s;
-  }
-  .ul-item:hover .items:hover {
-    filter: blur(0px);
-    scale: 103%;
-  }
-
-.nav img {
-  justify-content: end;
-  float: right;
-}
-.nav ul {
-  display: flex;
+  background-color: transparent;
   width: 100%;
 }
-.nav li {
-  list-style: none;
-  align-items: center;
-  display: flex;
+.ul-item:hover .items {
+  filter: blur(2px);
+  transition: 0.5s;
 }
-.nav li a {
-  text-decoration: none;
-  padding-right: 1.5rem;
-  color: #e7a0db;
-  font-size: 1.5rem;
-}
-
-
-.img {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 5rem;
-  float: right;
-}
-
-.title {
-  display: flex;
-  align-items: center;
+.ul-item:hover .items:hover {
+  filter: blur(0px);
+  scale: 103%;
 }
 .title a {
   font-size: 1.5rem;
-  line-height: 100%;
+  line-height: 1.255rem;
   color: #ebbae3;
   font-weight: bolder;
   text-decoration: none;
 }
+.title{
+  padding-left: 1rem;
+  width: fit-content;
+}
+
+.div-item {
+  display: grid;
+  z-index: 11111111;
+
+  height: 1rem;
+  width: 100%;
+  position: absolute;
+  align-items: end;
+  grid-template-columns: repeat(7, 0.1fr);
+  column-gap: 2rem;
+  margin-left: 20%;
+}
+
+.title p {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.div-item a {
+  text-decoration: none;
+  color: #EBBAE3;
+  font-size: 1.5rem;
+  font-weight: 6%;
+}
+.profile_item {
+  grid-column-start: 7;
+  justify-self: end;
+  padding-top: 10%;
+}
+
 
 .profile-pic {
   height: 42px;
@@ -85,10 +78,12 @@ body {
   scale: 110%;
 }
 .toggle-btn {
+  z-index: 122;
+  background-color: transparent;
   position: absolute;
   top: 1rem;
   right: 1rem;
-  display: block;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   height: 30px;
@@ -101,29 +96,124 @@ body {
   border-radius: 10px;
 }
 
+.hamburger-checkbox {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#hamburger-toggle{
+  display: none;
+}
+.hamburger {
+  /* display: flex; */
+
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.line {
+  display: none;
+  background-color: #ebbae3;
+
+  width: 30px;
+  height: 3px;
+  margin: 6px 0;
+}
+
 /* ******************************************************mobile**************************************************** */
-@media (max-width: 500px) {
+@media only screen and (max-width: 550px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #010409;
+    overflow-x: hidden;
+  }
   .nav {
     flex-direction: column;
-    height: 100%;
+    z-index: 11111;
+    width: 100%;
+  }
+
+
+  .div-item {
+    display: grid;
+    margin: 2rem 0 0 1rem ;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    transform: translatex(-100%);
+    grid-template-rows: repeat(10, 1.3rem);
+    grid-row-gap: 15%;
+    grid-template-areas:
+      "home "
+      "post "
+      "annoce "
+      "test1 "
+      "test2 "
+      "profile";
+  }
+  
+  
+  .div-item .itemss::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background-color: #0077b6;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+
+  }
+  .div-item  .itemss:hover::after{
+    transform: scaleX(1);
+    transform-origin: left; 
   }
   .title {
-    margin-top: 1rem;
-    padding-bottom: 2%;
-    border-bottom: 2px solid #e7a0db;
-    margin-left: -1rem;
+    grid-area: title;
   }
-  .title a {
-    font-size: 2rem;
+  .item1 {
+    grid-area: home;
+    grid-row-start: 0;
   }
-  .nav ul {
-    flex-direction: column;
-    width: 100%;
+  .item2 {
+    grid-area: post;
   }
-  .navUL li {
+  .item3 {
+    grid-area: annoce;
+  }
+  .item4 {
+    grid-area: test1;
+  }
+  .item5 {
+    grid-area: test2;
+  }
+  .profile_item {
+    grid-area: profile;
+    justify-self: normal;
+    padding-top: 5%;
+
+  }
+ 
+
+  .div-item a {
+    text-decoration: none;
+    color: #e7a0db;
+    font-size: 1.5rem;
+  }
+  .navUL bar {
     padding: 1rem;
     margin-left: -2rem;
-    width: 100%;
+    width: 10%;
+    background-color: #fff;
     text-align: center;
   }
   .img {
@@ -135,15 +225,10 @@ body {
   .toggle-btn {
     display: flex;
   }
-  .toggle {
-    position: relative;
-    display: flex;
-    width: 100px;
-    height: 52px;
-    background-color: red;
-    border-radius: 30px;
-    border: 2px solid gray;
-  }
+  /* .toggle-btn:checked + .div-item{
+      background-color: #fff;
+    
+  } */
   .nav:hover .items {
     filter: blur(0px);
   }
@@ -156,5 +241,45 @@ body {
     filter: blur(0px);
     scale: 103%;
   }
-  
+
+  .hamburger-checkbox {
+    display: block;
+  }
+
+  .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #f8e6e6;
+    margin: 6px 0;
+    transition: 0.2s linear;
+  }
+
+  /* Style for the hamburger icon when the checkbox is checked */
+  .hamburger-checkbox:checked + .hamburger .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-checkbox:checked + .hamburger .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-checkbox:checked + .hamburger .line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .content {
+    background-color: #f0f0f0;
+    height: fit-content;
+    transition: background-color 0.2s linear;
+  }
+
+  .hamburger-checkbox:checked ~ .div-item {
+    transform: translatex(0);
+    transition: 0.2s ease-out;
+  }
+  .hamburger-checkbox:not(:checked) ~ .div-item {
+    transform: translatex(-100%);
+    transition: 0.5s ease-out;
+  }
 }

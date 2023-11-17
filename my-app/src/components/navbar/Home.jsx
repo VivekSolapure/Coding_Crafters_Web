@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import "./home.css"
+import { Link } from "react-router-dom";
+
 export default function Dummyhome() {
+    const addMember=()=>{
+
+    }
     let a = 1;
     let b = true;
     const [index, setIndex] = useState(a)
@@ -65,7 +70,14 @@ export default function Dummyhome() {
                 </div>
                 <div className='line1_down'><div className='line_down'></div></div>
                 <div className="member-container">
-                    <h2 id='member_title'>Members</h2>
+                    <Link to="/inbox">
+                     <div className="Member_add">
+                     <p>+</p>
+                     </div>
+                    </Link>
+
+                    <h2 id='member_title' onClick={addMember}>Members</h2>
+
                     <div className="member-container2">
 
                         <div className='cardDiv'>

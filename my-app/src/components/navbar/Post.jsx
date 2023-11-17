@@ -42,7 +42,7 @@ function Posts(props) {
   return (
     <>
       <div className="Pbody">
-      <Link to='/inbox' ><div className="Postbtn"><p>+</p></div></Link>{
+      <Link to='/inbox'><div className="Postbtn"><p>+</p></div></Link>{
           Object.values(postData).length ===0 ?(
             <h1>No Post Yet</h1>
           ):
