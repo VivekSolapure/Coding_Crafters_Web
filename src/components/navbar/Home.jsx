@@ -6,15 +6,16 @@ import Mainboard from '../../admin/pages/Mainboard';
 import { RecentEvents } from '../../admin/components/RecentEvents';
 
 
+
 export default function Test2() {
     return (
         <>
             <div class="triangle-left">
-                <svg xmlns="http://www.w3.org/2000/svg" width="274" height="696" viewBox="0 0 4 696" fill="none">
-                    <path d="M-249.598 508.253L-25.1932 0.00042571L273.609 695.155L-249.598 508.253Z" fill="url(#paint0_linear_1144_166)" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="751" height="1023" viewBox="0 0 551 1023" fill="none">
+                    <path d="M-124.326 937.667C-161.019 933.798 -187.932 901.375 -184.978 864.597L-120.597 63.0758C-115.714 2.28111 -39.446 -21.8408 -0.491811 25.089L734.798 910.924C773.752 957.853 735.999 1028.37 675.344 1021.98L-124.326 937.667Z" fill="url(#paint0_linear_639_31)" />
                     <defs>
-                        <linearGradient id="paint0_linear_1144_166" x1="63.4424" y1="488.068" x2="60.9563" y2="6.8411" gradientUnits="userSpaceOnUse">
-                            <stop offset="0.0653348" />
+                        <linearGradient id="paint0_linear_639_31" x1="407.5" y1="937.001" x2="158" y2="-18.4989" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0653348" stop-opacity="-1000" />
                             <stop offset="0.589217" stop-color="#1E012F" />
                             <stop offset="1" stop-color="#5D0093" />
                         </linearGradient>
@@ -46,7 +47,7 @@ export default function Test2() {
                 </div>
                 <div className="home_logo home_grid2"><img src="./logo.png" alt="" /></div>
 
-                <RecentEvents/>
+                <RecentEvents />
 
 
             </div>
@@ -54,8 +55,8 @@ export default function Test2() {
 
             <Link to='/addMember'> <div className="AddMemBtn"><p>+</p></div></Link>
 
-        
-            
+
+
         </>
 
     )

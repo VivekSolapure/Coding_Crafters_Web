@@ -37,7 +37,7 @@ font-size: 50px;
 }
 .triangle-left {
   position: absolute;
-  left: -21rem;
+  left: -11rem;
   height: fit-content;
 }
 .triangle-left svg {
