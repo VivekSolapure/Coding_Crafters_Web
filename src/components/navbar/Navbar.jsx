@@ -45,7 +45,7 @@ const Navbar = (props) => {
             </div>
 
             <div className="items profile_item">
-              <img className="profile-pic" src="./profile-pic.png" alt="" />
+            <Link to="/signup">  <img className="profile-pic" src="./profile-pic.png" alt="" /></Link>
             </div>
           </div>
         </div>

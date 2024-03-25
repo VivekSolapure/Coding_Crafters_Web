@@ -1,7 +1,6 @@
 import React from 'react'
 import "./home.css"
 import { Link } from "react-router-dom";
-import AddMember from '../AddMember';
 import Mainboard from '../../admin/pages/Mainboard';
 import { RecentEvents } from '../../admin/components/RecentEvents';
 

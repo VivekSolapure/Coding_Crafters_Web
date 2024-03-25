@@ -1,143 +1,127 @@
-
 /**********************************************Footer********************************************************/
-.footer-start{
-    margin-top: 2rem;
-  }
-  .page-footer{
-     background:linear-gradient(
-      to right,
-      transparent 0%,
-      rgba(63, 12, 93, 0.292), rgba(35, 7, 53, 0.642) 90%
-    );
-     /*radial-gradient(rgb(40, 39, 39), rgba(7, 7, 7, 0) 10%);
+
+.footer_footer-start {
+  margin-top: 2rem;
+}
+.footer_page-footer {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(63, 12, 93, 0.292),
+    rgba(35, 7, 53, 0.642) 90%
+  );
+  /*radial-gradient(rgb(40, 39, 39), rgba(7, 7, 7, 0) 10%);
      #2A1B3D;#25274D; */
-    padding-top: 30px;
-    padding-bottom: 30px;
-    overflow: hidden;
-    width: 100%;
-    /* border-radius: 1.5625rem; */
-  }
-  .main{
-    display:flex;
-    align-items: flex-start;
-    text-align: center;
-    margin: 0 4em;
-    /* padding: 3rem; */
-    /* margin-top: 2rem; */
-  }
-  section.top .logo img{ 
-    height: 130px;
-    width: 110px;
-    margin: 0 auto;
-   
-  }
-  section{
-    position: relative; 
-    margin: 0 30px;
-  }
-  .titles{
-    font-family: baloo bhai san sans-serif;
-    font-size: small;
-    color: aliceblue;
-    
-  }
-  
-  
-  .links{
-    display:flex;
-    justify-content: space-between;
-    flex-direction: row;
-    
-    
-  }
-  .one{
-    text-align: center;
-    display: flex;
-    flex-direction:column;
-    width: 10rem;
-    line-height: 40px;
-    color:rgb(100, 183, 183) ;
-    margin:  3.3em;
-   
-   
-  }
-  .two{
-      
-    width: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color:rgb(100, 183, 183) ; 
-   line-height: 20px;
-   margin: 3.3em;
-  
-  }
-  .three{
-    
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    color:rgb(100, 183, 183) ;
-    
-    margin:  3.3em 3.3em 3.1em 3.3em;
-  }
-  .icon{
-    display: flex;
-   text-align: center;
-   flex-direction: row;
-   justify-content: space-evenly;
-   margin: 1rem;
-  
-   
-  }
-  .gmail{
-    height: 1.2rem;
-    width: 0 auto;
-  }
-  .mail{
-    margin-top: 0.2em;
-  }
-  .linkedin{
-    height: 1.6rem;
-    width: 0 auto;
-  }
-  .lkn{
-    margin-top: 0.1em;
-  }
-  .git{
-    height: 1.9rem;
-  }
-  .footer-bottom{
-    font-family: baloo bhai2 sans-serif;
-  
-  }
-  .bottom{
-    color: #f2e2e2;
-    text-align: center;
-     
-  }
-  .btn{
-    width: 11rem;
-    height: 2.5rem;
-    flex-shrink: 0;
-    border-radius: 1.5rem;
-    margin: 1em;
-    background: linear-gradient(
-      90deg,
-      #e7561e 1.82%,
-      #de4c8e 39.12%,
-      #de4c8e 64.72%,
-      #5c46e4 93.86%
-    );
-    color: #fffbfb;
-    text-align: center;
-     font-family: baloo bhai 2; /* Arial, Helvetica, sans-serif; */
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 300;
-    border: none;
-  
-  }
-  
-  
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow: hidden;
+  width: 100%;
+  /* border-radius: 1.5625rem; */
+}
+.footer_main {
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+  margin: 0 4em;
+  /* padding: 3rem; */
+  /* margin-top: 2rem; */
+}
+.footer_top .footer_logo img {
+  height: 130px;
+  width: 110px;
+  margin: 0 auto;
+}
+section {
+  position: relative;
+  margin: 0 30px;
+}
+.footer_titles {
+  font-family: baloo bhai san sans-serif;
+  font-size: small;
+  color: aliceblue;
+}
+
+.footer_links {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.footer_one {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  line-height: 40px;
+  color: rgb(100, 183, 183);
+  margin: 3.3em;
+}
+.footer_two {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(100, 183, 183);
+  line-height: 20px;
+  margin: 3.3em;
+}
+.footer_three {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: rgb(100, 183, 183);
+
+  margin: 3.3em 3.3em 3.1em 3.3em;
+}
+.footer_icon {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 1rem;
+}
+.footer_gmail {
+  height: 1.2rem;
+  width: 0 auto;
+}
+.footer_mail {
+  margin-top: 0.2em;
+}
+.footer_linkedin {
+  height: 1.6rem;
+  width: 0 auto;
+}
+.footer_lkn {
+  margin-top: 0.1em;
+}
+.footer_git {
+  height: 1.9rem;
+}
+.footer_footer-bottom {
+  font-family: baloo bhai2 sans-serif;
+}
+.footer_bottom {
+  color: #f2e2e2;
+  text-align: center;
+}
+.footer_btn {
+  width: 11rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 1.5rem;
+  margin: 1em;
+  background: linear-gradient(
+    90deg,
+    #e7561e 1.82%,
+    #de4c8e 39.12%,
+    #de4c8e 64.72%,
+    #5c46e4 93.86%
+  );
+  color: #fffbfb;
+  text-align: center;
+  font-family: baloo bhai 2; /* Arial, Helvetica, sans-serif; */
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 300;
+  border: none;
+}

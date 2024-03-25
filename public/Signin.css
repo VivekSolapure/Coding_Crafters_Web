@@ -1,0 +1,261 @@
+*{
+background: #0D1117;
+
+}
+.container{
+  position: relative;
+  background-color: rgb(25, 77, 59);
+  width: 100%;
+  height: 100%;
+ 
+}
+.body{
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Baloo Bhai 2', sans-serif;
+} 
+.wrapper{
+  width: 29.5625rem;
+  position:absolute;
+  margin: 0 auto;
+  max-width: 29.5625rem; /* for large screen */
+  right: 3%;
+  left: 60%;
+  margin-top: 6.999rem ;
+  height: 29.125rem;
+  mix-blend-mode: lighten;
+}
+
+
+.images {
+  position: absolute;
+  margin-top: 15.94rem;
+
+} 
+.logo{
+  position:fixed;
+  width: 8.28rem;
+  top: 9%;
+  mix-blend-mode: lighten;
+}
+.msg{
+  position:fixed;
+  margin-top: 7%;
+  margin-left: 9%;
+  color: whitesmoke;
+  font-size: 4rem;
+font-style: normal;
+font-weight: 700;
+line-height: 1.875rem;
+mix-blend-mode: lighten;
+}
+
+.msg a{
+  color: #78FFF7;
+  mix-blend-mode: lighten;
+}
+.tagline{
+  position: fixed;
+  font-size:2.5rem ;
+  margin-top: 10%;
+  color: #EBBAE3;
+  margin-left: 10%;
+  mix-blend-mode: lighten;
+
+}
+.tagline a{
+  color: #78FFF7;
+  mix-blend-mode: lighten;
+}
+.tagline a{
+  color: #A57DFC;
+  mix-blend-mode: lighten;
+}
+#l1{
+  color: white;
+}
+#l2{
+  color: #78FFF7;
+}
+.im1 {
+  width: 17.145rem;
+  height: 16.56506rem;
+  transform: rotate(-837.424deg);
+  position: absolute;
+  margin-top: 13.2rem;
+  top: 300%;
+  left: 12rem;
+  border: 4.74rem; 
+  mix-blend-mode: lighten;
+  
+}
+
+.im2 {
+  top: 484%;
+  position:absolute;
+ margin-top: 20rem;
+  border: 4.64rem; 
+  width: 14.24744rem;
+ height: 15.84081rem;
+ transform: rotate(-0.335deg);
+ mix-blend-mode: lighten; 
+ left: -0.5%;
+}
+
+.im3 {
+  position:fixed;
+  top: 37rem;
+  bottom: 0%;
+  left: -9rem;
+  border: 2px ; 
+  width: 44.8125rem;
+height: 43.8125rem;
+transform: rotate(-30.735deg);
+flex-shrink: 0;
+  /* width: 45.8125rem;
+  height: 40.8125rem;  */
+  /* transform: rotate(-34.735deg); */
+  border-radius: 84.8125rem;
+background: linear-gradient(140deg, #2812B2 0%, rgba(40, 18, 178, 0.93) 15.1%, rgba(40, 18, 178, 0.00) 100%);
+/* width: 17.38556rem;
+height: 18.16506rem;
+transform: rotate(-25.874deg);
+flex-shrink: 0; */
+}
+ .title{
+  color: #78FFF7;
+text-align: center;
+font-family: "Baloo Bhai 2";
+font-size: 3rem;
+font-weight: 700;
+line-height: 62.5%; 
+} 
+ form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} 
+ .icon1{
+width: 25px;
+height: 25px;
+flex-shrink: 0;
+fill: #78FFF7;
+margin-right: 1rem;
+margin-left: 1.06rem;
+margin-top: 9.10px;
+margin-bottom: 15.1px;
+mix-blend-mode:lighten;
+}
+
+.input-box,.input-box2{
+  border-radius: 0.6875rem;
+ border: 1px solid #78FFF7;
+ background: #141A23;
+ display: flex;
+ align-items: center;
+ margin-bottom: 1rem;
+ width: 29.5625rem;
+
+height: 4.1875rem;
+flex-shrink: 0;
+
+}
+.icon2{
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  fill: #78FFF7;
+  margin-right: 1rem;
+  margin-left: 1.06rem;
+  margin-top: 9.10px;
+  margin-bottom: 15.1px;
+  mix-blend-mode:lighten;
+
+
+}
+
+
+.input-box input,
+.input-box2 input {
+  width: calc(100% - 2rem);
+  padding: 1.5rem;
+  border: none;
+  font-size: 1.25rem;
+  background: none;
+  color: #78FFF7;
+  outline: none;
+}
+
+.role-checkboxes {
+  color: white;
+  mix-blend-mode: luminosity;
+  border: #78FFF7 4rem;
+  display: flex;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: "Baloo Bhai 2";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  
+}
+input[type="checkbox"]{
+  margin-right: 1.5rem ;
+  width: 1.6875rem;
+
+  
+}
+input[type="checkbox" i] {
+  margin: 3px 2px 3px 4px ;
+
+}
+.cl{
+ margin:20px 55px 9px 10px;
+  
+}
+
+
+button {
+  width: 9.25rem;
+  height: 2.9375rem;
+  flex-shrink: 0;
+  padding: 0.5rem;
+  background-color: #78FFF7;
+  border: 1px solid #0D1117;
+  border-radius:  0.4375rem;
+  cursor: pointer;
+  outline: none;
+  color: #0D1117;
+text-align: center;
+font-family: "Baloo Bhai 2";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 30px; /* 150% */
+}
+
+.register-link {
+  width:fit-content;
+  text-align: center;
+  margin-top: 5%;
+  color: #F3180A;
+
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+} 
+/* ----------------------------------------------------------Respnsiveness mobile-----------------------------------------------------------------*/
+@media only screen and (max-width: 550px){
+}
