@@ -1,9 +1,10 @@
 
 import { useState } from "react";
-import { database, storage } from "../firebase";
+import { FirebaseProvider, db, storage, useFirebase } from "../context/Firebase";
 import "./dummy_inbox.css";
 import 'firebase/storage';
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage"
+import Submit from "../admin/components/Submit";
 
 export default function Dummyinbox() {
 
@@ -21,9 +22,24 @@ export default function Dummyinbox() {
   const [uploadstatus, setuploadstatus] = useState(false)
   const [uploadno, setuploadno] = useState('')
   const [lengths, setlength] = useState('')
-  let URLS = []
-  
+  let URLS = ''
+  const firebase = useFirebase();
+
+
   const postDatas = async () => {
+    let currentDate = new Date();
+    let monthNames = [
+      "January", "February", "March", "April", "May", "June", "July",
+      "August", "September", "October", "November", "December"
+    ];
+    let monthIndex = currentDate.getMonth();
+    let monthName = monthNames[monthIndex];
+    let day = currentDate.getDate();
+    let year = currentDate.getFullYear();
+    day = day < 10 ? '0' + day : day;
+    let formattedDate = `${day} ${monthName} ${year.toString().slice(-2)}`;
+    let time = Date.now();
+
     if (((Post_txtTitle || Post_textarea) === '') || (ImgUpload.length === 0)) {
       alert("Please Fill all ");
       if (window.confirm) {
@@ -34,24 +50,22 @@ export default function Dummyinbox() {
 
       for (let i = 0; i < ImgUpload.length; i++) {
         setuploadno(i + 1)
-        const imgref = ref(storage, `Images/${ImgUpload[i].name}`)
+        const imgref = ref(storage, `post/${time}/${ImgUpload[i].name}`)
         await uploadBytes(imgref, ImgUpload[i])//For uploading (kuta upload,kai upload)
           .then(async (snapshot) => {//  "snapshot" tyat sagala astay [items,prefixes,extra]
             await getDownloadURL(snapshot.ref)//url download karaylo ref cha, ref kai ahe tar "ImageUrls/"
               .then((url) => {//snapshot madla url
-                URLS.push(url)
-
+                URLS += url + '>>>'
               })
           });
       }
-      let time = Date.now();
-      database.ref("posts").child(time).set({
-
-        Title: Post_txtTitle,
-        Para: Post_textarea,
-        IImages: URLS
+      firebase.putData(`post/${time}`, {
+        description: Post_textarea,
+        imglist: URLS,
+        postuploadedon: formattedDate,
+        title: Post_txtTitle
       })
-    }    
+    }
   }
 
   const status = () => {
@@ -64,6 +78,7 @@ export default function Dummyinbox() {
 
   return (
     <>
+      <Submit inbox={[Post_txtTitle, TxtTitle, Post_textarea, TxtChange]} />
       <div className="postUpload_body">
         <div className="postUpload_container">
           <textarea

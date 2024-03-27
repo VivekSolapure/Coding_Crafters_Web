@@ -1,7 +1,8 @@
 import React from 'react'
 import './MemLists.css'
 
-const MemLists= props => {
+const MemLists= (props) => {
+  console.log("Props:",props);
    return (
     <>
       <div className="member_div_h1">
@@ -22,7 +23,7 @@ const MemLists= props => {
                       <img src={member.image} alt="" />
                     </div>
                     <div className="member_content_txt">
-                      <h1>{member.name}</h1>
+                      <h1>{member.role}</h1>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod porro repellat, at cumque quaerat, fugiat nam consectetur, quas ipsam minus tenetur unde quasi vitae quos! Ipsam assumenda tenetur ab saepe?</p>
                     </div>
                   </div>

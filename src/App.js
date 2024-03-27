@@ -5,7 +5,6 @@ import Inbox from "./components/Inbox"
 import Test1 from "./components/Test1"
 import AddMember from './components/AddMember';
 import Bgv from "./sharing/bgv"
-
 import {
   BrowserRouter as Router,
   Route,
@@ -13,10 +12,12 @@ import {
   Navigate,
 } from "react-router-dom";
 import Events from './users/components/Events';
-import Members from './admin/pages/Members';
+import Members from './admin/pages/GetMembers';
 import Footer from './sharing/footer';
-import SignIn from './sharing/Signin';
-
+import Signup from './sharing/Signup';
+import Login from './sharing/Login';
+import Authen from './sharing/Authen';
+import Submit from './admin/components/Submit';
 
 function App() {
 
@@ -32,7 +33,6 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} >Home</Route>
-            <Route path="/signup" element={<SignIn />}>Signup</Route>
             <Route path="/post" element={<Post />}>Post</Route>
             <Route path="/post/inbox" element={<Inbox />}>Inbox</Route>
             <Route path="/members" element={<Members />}>Members</Route>
@@ -40,13 +40,18 @@ function App() {
             <Route path="/test1" element={<Test1 />}>Test1</Route>
             <Route path="/test2aa" element={<Events />}>Test2aa</Route>
             <Route path="/addMember" element={<AddMember />}>AddMember</Route>
+            <Route path="/authen" element={<Authen/>}>Signup</Route>
+            <Route path="/submit" element={<Submit/>}>Submit</Route>
+            {/* <Route path="/signup" element={<Signup />}>Signup</Route>
+            <Route path="/login" element={<Login/>}>Signup</Route> */}
+
             <Route path="*" element={<Navigate to="/" />}></Route>
           </Routes>
         </div>
 
 
       </Router >
-<Footer></Footer>      
+      <Footer></Footer>
 
     </>
   );

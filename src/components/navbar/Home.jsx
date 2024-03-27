@@ -1,7 +1,7 @@
 import React from 'react'
 import "./home.css"
 import { Link } from "react-router-dom";
-import Mainboard from '../../admin/pages/Mainboard';
+import Mainboard from '../../admin/pages/GetMainboard';
 import { RecentEvents } from '../../admin/components/RecentEvents';
 
 
@@ -52,7 +52,7 @@ export default function Test2() {
             </div>
             <Mainboard />
 
-            <Link to='/addMember'> <div className="AddMemBtn"><p>+</p></div></Link>
+            {/* <Link to='/addMember'> <div className="AddMemBtn"><p>+</p></div></Link> */}
 
 
 

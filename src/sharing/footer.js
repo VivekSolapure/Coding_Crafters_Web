@@ -9,7 +9,7 @@ function Footer() {
                     <div className='footer_main'>
                         <div className='footer_List1'>
                             <div className='footer_logo'>
-                                <img src='./images/logo.png'></img>
+                                <img src='logo.png'></img>
                                 <div class="titles">
                                     <h1 id='first'>Coding Crafters</h1>
                                     <h2 id='second'>Community|Enthusiam|Knowledge</h2>
@@ -36,13 +36,13 @@ function Footer() {
                                 </div>
                                 <div className='footer_icon'>
                                     <div className='footer_mail'>
-                                        <img className='footer_gmail' src='./images/gmail.png'></img>
+                                        <img className='footer_gmail' src='gmail.png'></img>
                                     </div>
                                     <div className='footer_lkn'>
-                                        <img className='footer_linkedin' src='./images/linkedin.png'></img>
+                                        <img className='footer_linkedin' src='linkedin.png'></img>
                                     </div>
                                     <div className='footer_github'>
-                                        <img className='footer_git' src='./images/git.png'></img>
+                                        <img className='footer_git' src='git.png'></img>
                                     </div>
                                 </div>
                             </div>
