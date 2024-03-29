@@ -41,12 +41,14 @@ body {
   z-index: 11111111;
 
   height: 1rem;
-  width: 100%;
+  width: 95%;
   position: absolute;
   align-items: end;
-  grid-template-columns: repeat(7, 0.1fr);
-  column-gap: 2rem;
-  margin-left: 20%;
+  grid-template-columns: repeat( 0fr);
+  /* grid-auto-rows: minmax(100px, auto); */
+  /* grid-auto-flow: column; */
+  column-gap: 0rem;
+  margin-left: 5%;
 }
 
 .title p {
@@ -55,15 +57,23 @@ body {
   font-size: 1.5rem;
 }
 
+.div-item .items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .div-item a {
   text-decoration: none;
   color: #EBBAE3;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 6%;
 }
+
 .profile_item {
   grid-column-start: 7;
   padding-top: 10%;
+  justify-self: start;
 }
 
 
@@ -278,7 +288,7 @@ body {
     transition: 0.2s ease-out;
   }
   .hamburger-checkbox:not(:checked) ~ .div-item {
-    transform: translatex(-100%);
+    transform: translatex(-180%);
     transition: 0.5s ease-out;
   }
 }

@@ -18,6 +18,10 @@ import Signup from './sharing/Signup';
 import Login from './sharing/Login';
 import Authen from './sharing/Authen';
 import Submit from './admin/components/Submit';
+import MemLists from './users/components/MemLists';
+import MainBoardLists from './users/components/MainBoardLists';
+import Mainboard from './admin/pages/GetMainboard';
+
 
 function App() {
 
@@ -40,8 +44,9 @@ function App() {
             <Route path="/test1" element={<Test1 />}>Test1</Route>
             <Route path="/test2aa" element={<Events />}>Test2aa</Route>
             <Route path="/addMember" element={<AddMember />}>AddMember</Route>
-            <Route path="/authen" element={<Authen/>}>Signup</Route>
-            <Route path="/submit" element={<Submit/>}>Submit</Route>
+            <Route path="/authen" element={<Authen />}>Signup</Route>
+            <Route path="/submit" element={<Submit />}>Submit</Route>
+            <Route path="/mainMember" element={< Mainboard />}>Submit</Route>
             {/* <Route path="/signup" element={<Signup />}>Signup</Route>
             <Route path="/login" element={<Login/>}>Signup</Route> */}
 

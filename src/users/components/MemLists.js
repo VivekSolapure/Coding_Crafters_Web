@@ -1,8 +1,11 @@
 import React from 'react'
 import './MemLists.css'
+import { database } from "../../context/Firebase";
+import { useState, useEffect } from "react";
+import { child, get , ref } from "firebase/database";
+
 
 const MemLists= (props) => {
-  console.log("Props:",props);
    return (
     <>
       <div className="member_div_h1">

@@ -28,21 +28,10 @@ const Navbar = (props) => {
             <div className="items item2" >
               <Link className="itemss" to="./post"> {props.post}</Link>
             </div>
-            
-            <div className="items item4">
-              <Link className="itemss" to="/members">Members</Link>
-            </div>
-            <div className="items item4">
+            <div className="items item3">
               <Link className="itemss" to="/events">Events</Link>
             </div>
-            <div className="items item3">
-            <Link className="itemss" to="/test1">Test1</Link>
-
-            </div>
-            <div className="items item3">
-            <Link className="itemss" to="/test2aa">Test2</Link>
-
-            </div>
+          
 
             <div className="items profile_item">
             <Link to="/authen">  <img className="profile-pic" src="./profile-pic.png" alt="" /></Link>

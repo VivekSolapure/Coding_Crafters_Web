@@ -26,7 +26,7 @@
 
 .event_pg_holder {
   display: flex;
-  width: 66.3125rem;
+  width: 75.3125rem;
   flex-direction: column;
   align-items: center;
   gap: 2.875rem;
@@ -105,7 +105,7 @@ flex: 1 0 0;
 
 .event_dscrptn_heading {
   display: flex;
-  height: 3.625rem;
+  height: 5.625rem;
   min-width: 34.375rem;
   flex-direction: column;
   justify-content: center;
