@@ -19,7 +19,7 @@ function Footer() {
                         <div className="footer_links">
                             <div className="footer_one">
                                 <div>
-                                    <a >About us </a>
+                                    <a>About us </a>
                                 </div>
                                 <div>
                                     <a >Gallery</a>
@@ -36,13 +36,16 @@ function Footer() {
                                 </div>
                                 <div className='footer_icon'>
                                     <div className='footer_mail'>
-                                        <img className='footer_gmail' src='gmail.png'></img>
+                                     
+                                        <img className='footer_gmail' src='gmail.png' alt='gmail'></img>
                                     </div>
                                     <div className='footer_lkn'>
-                                        <img className='footer_linkedin' src='linkedin.png'></img>
+                                    
+                                        <img className='footer_linkedin' src='linkedin.png' alt='linkedin'></img>
                                     </div>
                                     <div className='footer_github'>
-                                        <img className='footer_git' src='git.png'></img>
+                                       
+                                        <img className='footer_git' src='git.png' alt='github'></img>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +67,7 @@ function Footer() {
                 <div className='footer_footer-bottom'>
                     <div className='footer_bottom'>
                         Copyright © 2023 Coding Crafters
-                        <br /> FAQ | Archieve
+                        <br /> FAQ 
                     </div>
                 </div>
             </footer >

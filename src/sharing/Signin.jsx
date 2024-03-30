@@ -1,58 +1,48 @@
 import React from 'react';
+import FrameComponent from'./Framecomponent';
 import './Signin.css';
 import { Link } from "react-router-dom";
 
-import { FaRegUser, FaLock } from "react-icons/fa";
+// import { FaRegUser, FaLock } from "react-icons/fa";
 const SignIn = () => {
   return (
     <>
-    <div className='signin_main'>
-      <div className="signin_container">
-        <div className='signin_image'>
-          <h3 className='signin_msg'>Join our community  </h3>
-          <h6 className='signin_tagline'> Unlock Your Coding   Potential </h6>
-          <img className='signin_logo' src='logo.png' alt='logo'></img>
-          <img className='signin_im1' src="circle1.png" alt="circle1"></img>
-          <img className='signin_im2' src="circle2.png" alt="circle2"></img>
-
+    <div className="signin-35">
+      <div className="frame-parent">
+        <div className="join-our-community-parent">
+          <h1 className="join-our-community-container">
+            <span>{`Join Our `}</span>
+            <span className="community">Community</span>
+          </h1>
+          <div className="logo-1-parent">
+            <img className="logo-1-icon" alt="" src="/logo.png" />
+            <img
+              className="icon-settings"
+              loading="lazy"
+              alt=""
+              src="circle1.png"
+            />
+            <img
+              className="icon-settings1"
+              alt=""
+              src="/circle2.png"
+            />
+          </div>
         </div>
-        <div className='signin_wrapper'>
-          <form action=''>
-            <h1 className="signin_title">
-              Sign in </h1>
-
-            <div className="signin_input-box">
-              <FaRegUser className="signin_icon1" />
-              <input type="text" placeholder='Username' required />
-            </div>
-
-            <div className="signin_input-box2">
-              <FaLock className="signin_icon2" />
-              <input type="text" placeholder='Password' required />
-
-            </div>
-            <div className="signin_role-checkboxes">
-              <label className='signin_cl'>
-                <input type="checkbox" name="role" value="admin" />
-                Admin
-              </label>
-              <label className='signin_cl'>
-                <input type="checkbox" name="role" value="Member" />
-                Member </label>
-              <label className='signin_cl'>
-                <input type="checkbox" name="role" value="Other" />
-                Other
-              </label>
-            </div>
-            <button className='signin_button' type="submit">Log in</button>
-            <div className="signin_register-link">
-              not yet registered ?
-              <a href='#'> SignUp</a>
-            </div>
-          </form>
+        <div className="unlock-your-coding-potentials-wrapper">
+          <h1 className="unlock-your-coding-container">
+            <span className="unlock">Unlock</span>
+            <span>{` your `}</span>
+            <span className="coding">coding</span>
+            <span>{` `}</span>
+            <span className="potentials">potentials</span>
+          </h1>
         </div>
       </div>
+      <div className="desktop-35-inner">
+        <FrameComponent />
       </div>
+    </div>
     </>
   );
 };
