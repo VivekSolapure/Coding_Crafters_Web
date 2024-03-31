@@ -32,7 +32,7 @@ function Footer() {
                         <div className='footer_links'>
                             <div class="two">
                                 <div className='footer_links_contact_us'>
-                                    Connect with us to share progress <br />and  productivity :
+                                    Connect with us :
                                 </div>
                                 <div className='footer_icon'>
                                     <div className='footer_mail'>
@@ -40,8 +40,9 @@ function Footer() {
                                         <img className='footer_gmail' src='gmail.png' alt='gmail'></img>
                                     </div>
                                     <div className='footer_lkn'>
-                                    
+                                  
                                         <img className='footer_linkedin' src='linkedin.png' alt='linkedin'></img>
+                                        
                                     </div>
                                     <div className='footer_github'>
                                        

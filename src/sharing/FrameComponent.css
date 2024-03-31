@@ -32,8 +32,8 @@
   max-width: 100%;
 }
 .icon-person {
-  width: 1.688rem;
-  height: 1.688rem;
+  width: 1.288rem;
+  height: 1.388rem;
   position: relative;
   z-index: 2;
 }
@@ -88,8 +88,9 @@
   display: none;
 }
 .icon-mail-outline {
-  height: 1.763rem;
-  width: 1.875rem;
+  top: 5px;
+  height: 1.363rem;
+  width: 1.275rem;
   position: relative;
   z-index: 1;
 }
@@ -154,8 +155,10 @@
   box-sizing: border-box;
   min-width: 4.813rem;
   gap: 1.25rem;
+  
 }
 .frame-parent4{
+  color: #0cc2b6b3;
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -168,12 +171,14 @@
 }
 .rectangle-container-admin{
 opacity: 1;
-display: flex;
+
 cursor: pointer;
-outline: #eee;
+
+margin-top: 9px;
 }
 .rectangle-container-member{
   opacity: 1;
+  margin-top: 9px;
   }
 
 .member {

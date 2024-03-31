@@ -1,5 +1,5 @@
-import { useCallback } from "react";
 import "./FrameComponent.css";
+import { FaRegUser, FaLock } from "react-icons/fa";
 import React, { useState } from 'react'
 const FrameComponent = () => {
   const [email, seteemail] = useState('')
@@ -9,6 +9,8 @@ const FrameComponent = () => {
   const [File, setfile] = useState([])
   const loginHandler = () => {
     console.log(password, email)
+    console.log(Admin,Member)
+    
   }
 
   return (
@@ -21,7 +23,7 @@ const FrameComponent = () => {
           <div className="rectangle-parent">
             <div className="frame-child" />
             <div className="icon-person-wrapper">
-              <img className="icon-person" alt="" src="/-icon-person.svg" />
+            <FaRegUser className="icon-person" />
             </div>
             <input className="username" placeholder="UserName" type="text" required onChange={(e) => {
               seteemail(e.target.value)
@@ -30,11 +32,7 @@ const FrameComponent = () => {
           </div>
           <div className="rectangle-group">
             <div className="frame-item" />
-            <img
-              className="icon-mail-outline"
-              alt=""
-              src="/-icon-mail-outline.svg"
-            />
+            <FaLock className="icon-mail-outline" />
             <input className="frame-inner" placeholder="Password" type="text" required
               onChange={(e) => { setpassword(e.target.value) }} />
           </div>
@@ -42,12 +40,12 @@ const FrameComponent = () => {
         <div className="frame-wrapper">
           <div className="frame-parent1">
             <div className="frame-parent2">
-              <input className="rectangle-container-admin" type="checkbox" onClick={(e) => { setadmin(e.target.value) }}  />
+              <input className="rectangle-container-admin" value={'Admin'}  type="checkbox" onClick={(e) => { setadmin(e.target.value) }}  />
               <div className="member" >Admin</div>
             </div>
 
             <div className="frame-parent3">
-              <input className="rectangle-container-member" type="checkbox" onClick={(e) => { setmember(e.target.value) }} />
+              <input className="rectangle-container-member" value={'Member'} type="checkbox" onClick={(e) => { setmember(e.target.value) }} />
               <div className="member">Member</div>
             </div>
 
