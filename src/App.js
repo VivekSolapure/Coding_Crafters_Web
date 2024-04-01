@@ -11,11 +11,15 @@ import {
   Route,
   Routes,
   Navigate,
+  Form,
 } from "react-router-dom";
 import Events from './users/components/Events';
 import Members from './admin/pages/Members';
 import Footer from './sharing/footer';
 import SignIn from './sharing/Signin';
+import About from './sharing/About';
+
+
 
 
 function App() {
@@ -39,6 +43,7 @@ function App() {
             <Route path="/events" element={<Events />}>Events</Route>
             <Route path="/test1" element={<Test1 />}>Test1</Route>
             <Route path="/test2aa" element={<Events />}>Test2aa</Route>
+            <Route path="/aboutus" element={<About />}>About</Route>
             <Route path="/addMember" element={<AddMember />}>AddMember</Route>
             <Route path="*" element={<Navigate to="/" />}></Route>
           </Routes>

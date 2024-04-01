@@ -31,7 +31,7 @@
   .footer_titles {
     font-family: baloo bhai san sans-serif;
     font-size: small;
-    color: aliceblue;
+    color: #ea8e8e;
   }
   
   .footer_links {
@@ -48,6 +48,11 @@
     line-height: 40px;
     color: rgb(100, 183, 183);
     margin: 3.3em;
+   
+  }
+  .footer_one #first-abt,#second-gly,#third-et{
+    text-decoration: none;
+    color:#ea8e8e;
   }
   .footer_two {
     width: 100%;
@@ -82,6 +87,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin: 1rem;
+    vertical-align: middle;
   }
   .footer_gmail {
     height: 1.2rem;
@@ -89,6 +95,7 @@
   }
   .footer_mail {
     margin-top: 0.2em;
+    position: relative;
   }
   .footer_linkedin {
     height: 1.6rem;
@@ -96,6 +103,10 @@
   }
   .footer_lkn {
     margin-top: 0.1em;
+    position: relative;
+  }
+  .footer_github{
+    position: relative;
   }
   .footer_git {
     height: 1.9rem;

@@ -19,13 +19,13 @@ function Footer() {
                         <div className="footer_links">
                             <div className="footer_one">
                                 <div>
-                                    <a>About us </a>
+                                    <a id='first-abt'>About us </a>
                                 </div>
                                 <div>
-                                    <a >Gallery</a>
+                                    <a id='second-gly' class href="/Test1">Gallery</a>
                                 </div>
                                 <div>
-                                    <a>Event</a>
+                                    <a id='third-et' class href="/events">Event</a>
                                 </div>
                             </div>
                         </div>
@@ -36,17 +36,20 @@ function Footer() {
                                 </div>
                                 <div className='footer_icon'>
                                     <div className='footer_mail'>
-                                     
+                                        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/agpitcodingcrafters6308%40gmail.com?compose=new">
                                         <img className='footer_gmail' src='gmail.png' alt='gmail'></img>
+                                        </a>
                                     </div>
                                     <div className='footer_lkn'>
-                                  
+                                    <a href="https://www.linkedin.com/company/coding-crafter-s/mycompany/">
                                         <img className='footer_linkedin' src='linkedin.png' alt='linkedin'></img>
-                                        
+                                        </a>
                                     </div>
                                     <div className='footer_github'>
+                                    <a href="https://github.com/Coding-Crafters">
                                        
                                         <img className='footer_git' src='git.png' alt='github'></img>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
