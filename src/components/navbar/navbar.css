@@ -66,7 +66,7 @@ body {
 .div-item a {
   text-decoration: none;
   color: #EBBAE3;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 6%;
 }
 
@@ -289,6 +289,6 @@ body {
   }
   .hamburger-checkbox:not(:checked) ~ .div-item {
     transform: translatex(-180%);
-    transition: 0.5s ease-out;
+    transition: 0.2s ease-out;
   }
 }

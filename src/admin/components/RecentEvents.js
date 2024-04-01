@@ -49,20 +49,23 @@ export const RecentEvents = props => {
     slidesToScroll: 1,
   };
 
-  
+
   return (
-  <>
-    <div className="home_entImgs home_grid3" >
-      <div className="home_entSlider">
-        <img style={{ ...css }} src={recntEvntData.image} alt="" />
+    <>
+      <div className="home_body">
+        <div className="home_entImgs home_grid3" >
+
+          <div className="home_entSlider">
+            <img style={{ ...css }} src={recntEvntData.image} alt="" />
+          </div>
+        </div>
+        <div className="home_entInfo home_grid4">
+          <div >
+            <div className="quote"><blockquote></blockquote></div>
+            <div className="text">{recntEvntData.description}</div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="home_entInfo home_grid4">
-      <div >
-        <div className="quote"><blockquote></blockquote></div>
-        <div className="text">{recntEvntData.description}</div>
-      </div>
-    </div>
-  </>
+    </>
   )
 }

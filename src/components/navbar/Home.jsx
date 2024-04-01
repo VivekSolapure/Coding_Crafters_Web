@@ -41,15 +41,29 @@ export default function Test2() {
                     <div className="home_JoinUs">
                         <h1>Join Our <span>Community</span> </h1>
                         <p>Unlock your coding potentials</p>
-                        <button className="home_JoinUS_btn">Join US</button>
+                        <div className=' home_JoinUs_btn'>
+                            <div class="wrap">
+                                <button class="button">Join Us</button>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div className="home_logo home_grid2"><img src="./logo.png" alt="" /></div>
+                <div className="home_logo home_grid2">
+                    <img src="./logo.png" alt="" />
+                </div>
+                <div className='home_mobile_RecntEvent home_grid3' >
+                    <h2 >Recent Events</h2>
 
-                <RecentEvents />
+                </div>
 
 
             </div>
+            <div className='home_desktop_RecntEvent home_grid5'>
+                <h2 >Recent Events</h2>
+
+            </div>
+            <RecentEvents />
             <Mainboard />
 
             {/* <Link to='/addMember'> <div className="AddMemBtn"><p>+</p></div></Link> */}
