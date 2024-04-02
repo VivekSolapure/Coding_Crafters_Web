@@ -1,0 +1,52 @@
+.logo-1-icon {
+    height: 7.75rem;
+    width: 7.125rem;
+    position: relative;
+    object-fit: cover;
+  }
+  .header-container-log {
+    width: 59rem;
+    height: 6.45rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .crafters-txt {
+    color: #ea8e8e;
+    font-size: smaller;
+  }
+  .coding-crafters-txt {
+    position: relative;
+    line-height: 1rem;
+    font-size: smaller;
+  }
+  .coding-crafters-content {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 0 0.063rem;
+    font-size: smaller;
+  }
+  .Main-logged {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.188rem 14.875rem 8.313rem;
+    box-sizing: border-box;
+    gap: 1.5rem;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 2.5rem;
+    color: #fff;
+    font-family: "Baloo Bhaijaan 2";
+  }
+
+ 

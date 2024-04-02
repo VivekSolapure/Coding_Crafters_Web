@@ -3,7 +3,7 @@ import FrameComponent from'./Framecomponent';
 import './Signin.css';
 import { Link } from "react-router-dom";
 
-// import { FaRegUser, FaLock } from "react-icons/fa";
+
 const SignIn = () => {
   return (
     <>

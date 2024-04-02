@@ -6,19 +6,20 @@ import Test1 from "./components/Test1"
 import AddMember from './components/AddMember';
 import Bgv from "./sharing/bgv"
 
+
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
-  Form,
+
 } from "react-router-dom";
 import Events from './users/components/Events';
 import Members from './admin/pages/Members';
 import Footer from './sharing/footer';
 import SignIn from './sharing/Signin';
 import About from './sharing/About';
-
+import Logininfo from './sharing/Logininfo';
 
 
 
@@ -44,6 +45,7 @@ function App() {
             <Route path="/test1" element={<Test1 />}>Test1</Route>
             <Route path="/test2aa" element={<Events />}>Test2aa</Route>
             <Route path="/aboutus" element={<About />}>About</Route>
+            <Route path="/logininfo" element={<Logininfo />}>Logininfo</Route>
             <Route path="/addMember" element={<AddMember />}>AddMember</Route>
             <Route path="*" element={<Navigate to="/" />}></Route>
           </Routes>
