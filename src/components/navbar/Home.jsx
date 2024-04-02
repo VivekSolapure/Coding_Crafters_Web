@@ -43,7 +43,7 @@ export default function Test2() {
                         <p>Unlock your coding potentials</p>
                         <div className=' home_JoinUs_btn'>
                             <div class="wrap">
-                                <button class="button">Join Us</button>
+                            <Link to='/loginInfo'>    <button class="button">Join Us</button></Link>
                             </div>
 
                         </div>
@@ -60,7 +60,7 @@ export default function Test2() {
 
             </div>
             <div className='home_desktop_RecntEvent home_grid5'>
-                <h2 >Recent Events</h2>
+                <h2 >Upcoming Events</h2>
 
             </div>
             <RecentEvents />

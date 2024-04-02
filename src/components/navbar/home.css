@@ -282,7 +282,8 @@ content: '';
   align-self: center;
   display: flex;
   border-radius: 1.5rem 0 0 1.5rem;
-  background: #232325;
+  background: #23232536;
+  border: #284851 solid 2px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -364,9 +365,10 @@ content: '';
   border-radius: 130.296px;
 }
 .IncardDiv {
-  background-color: #454444;
+  background-color: #1A222F;
   position: relative;
   border-radius: 1rem;
+  border: #284851 solid 2px;
   width: 280px;
   margin: -60px auto auto auto;
   display: flex;
@@ -378,7 +380,7 @@ content: '';
 .underline {
   position: absolute;
   height: 3px;
-  background-color: #fff;
+  background-color: #EA8E8E;
   width: 40%;
   display: flex;
   display: block;
@@ -467,13 +469,13 @@ a {
 		background-size: 105%;
 		box-shadow: 0px 0px 20px 0px rgba(#777777, 0.6);
 
-		.ccard__button {
-      display: block;
+		.ccard__button{
 			transform: translateY(80%);
 			color: #027090;
 			transition: all 0.3s;
       
 		}
+    
 	}
 
 }
@@ -481,8 +483,6 @@ a {
 .ccard__button {
 	position: absolute;
   z-index: -1;
-  display: flex;
-  flex-direction: column;
 	left: 0;
 	bottom: 0;
 	display: block;
@@ -499,8 +499,11 @@ a {
 	transition: all 0.3s;
 }
 .gitgggg{
-  width: 3rem;
-  height: 3rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  mix-blend-mode: multiply;
+  /* display: none; */
+  margin: 0 1rem 0 0;
 }
 
 

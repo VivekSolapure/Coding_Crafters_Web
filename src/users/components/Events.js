@@ -9,21 +9,21 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 
-
 const Events = () => {
-    const auth = getAuth();
+
+    const auth= getAuth();
     const [user, setuser] = useState(null)
-    useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                console.log("You are logged in", user);
-                setuser(user)
-            } else {
-                console.log("you are logged out");
-                setuser(null)
-            }
-        })
-    }, []);
+    useEffect(()=>{
+      onAuthStateChanged(auth,(user)=>{
+          if(user){
+              console.log("You are logged in",user);
+              setuser(user)
+          }else{
+              console.log("you are logged out");
+              setuser(null)
+          }
+      })
+  },[]);
     const settings = {
         dots: true,
         infinite: true,
@@ -54,11 +54,20 @@ const Events = () => {
     }, []);
 
     console.log(postData);
-    const isAdmin = user && user.email === "solapurevivek2003@gmail.com"
+    const isAdmin = user && user.email === "ketanbhogshetti12@gmail.com"
+
+  
     return (<>
         <div className="event_glow_up" />
         <div className="event_pg_holder0">
             <div className="event_pg_holder">
+            {isAdmin && (
+          <Link to="/post/inbox">
+            <div className="Postbtn">
+              <p>+</p>
+            </div>
+          </Link>
+        )}
                 <div className="event_headings">
                     <div className="event_heading">Events</div>
                     <div className="eventhd_dscrptn">

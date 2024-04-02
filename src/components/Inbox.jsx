@@ -78,7 +78,6 @@ export default function Dummyinbox() {
 
   return (
     <>
-      <Submit inbox={[Post_txtTitle, TxtTitle, Post_textarea, TxtChange]} />
       <div className="postUpload_body">
         <div className="postUpload_container">
           <textarea

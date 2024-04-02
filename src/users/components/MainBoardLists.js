@@ -2,6 +2,7 @@ import React from 'react'
 import { database } from "../../context/Firebase";
 import { useState, useEffect } from "react";
 import { child, get, ref } from "firebase/database";
+import { Link } from 'react-router-dom';
 
 const MainBoardLists = props => {
     // console.log(props.MboardItems);
@@ -67,11 +68,11 @@ const MainBoardLists = props => {
         fetchData();
 
     }, []);
-    Object.values(mainMemberData).map(a=>{
-        Object.values(a).map(b=>{
-            console.log(b.github);
-        })
-    })
+    // Object.values(mainMemberData).map(a => {
+    //     Object.values(a).map(b => {
+    //         console.log(b.github);
+    //     })
+    // })
 
     // let aa= Object.values(member).split("_")
     // console.log(aa);
@@ -97,17 +98,20 @@ const MainBoardLists = props => {
                             <div className="IncardDiv">
                                 <div className="infoDiv">
                                     <p id='name'>  {mainMem.role} <div className='underline1'><div className='underline' ></div></div><h3 id='name'> {mainMem.name}</h3></p>
-                                    <h4>Persuing :{mainMem.course}</h4>
+                                    <h4>Persuing : {mainMem.persuing}</h4>
                                     <p>selected for</p>
                                     <h5>2024-25</h5>
-                                </div>
-                                <div href="#" className="ccard__button">
-                                    <img className='gitgggg' src="git.png" alt="" />
-                                    <img className='gitgggg' src="git.png" alt="" />
-                                    <img className='gitgggg' src="git.png" alt="" />
-                                </div>
-
-
+                                </div>{
+                                    Object.values(mainMem).map((socials, id) => (
+                                        <div className="ccard__button" key={id}>
+                                            
+                                            <a href={socials.github} target="_blank"><img className='gitgggg' src="git.png" alt="" /></a>
+                                            <a href={socials.linkedin} target="_blank"><img className='gitgggg' src="linkedin.png" alt="" /></a>
+                                            <a href={socials.twitter} target="_blank"><img className='gitgggg' src="twitter.png" alt="" /></a>
+                                            <a href={socials.instagram} target="_blank"><img className='gitgggg' src="instagram.png" alt="" /></a>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
 
@@ -127,10 +131,20 @@ const MainBoardLists = props => {
                             <div className="IncardDiv">
                                 <div className="infoDiv">
                                     <p id='name'>  {dev.role} <div className='underline1'><div className='underline' ></div></div><h3 id='name'> {dev.name}</h3></p>
-                                    <h4>Persuing :{dev.course}</h4>
+                                    <h4>Persuing :{dev.persuing}</h4>
                                     <p>selected for</p>
                                     <h5>2024-25</h5>
-                                </div>
+                                </div>{
+                                    Object.values(dev).map((socials, id) => (
+                                        <div className="ccard__button" key={id}>
+                                            
+                                            <a href={socials.github} target="_blank"><img className='gitgggg' src="git.png" alt="" /></a>
+                                            <a href={socials.linkedin} target="_blank"><img className='gitgggg' src="linkedin.png" alt="" /></a>
+                                            <a href={socials.twitter} target="_blank"><img className='gitgggg' src="twitter.png" alt="" /></a>
+                                            <a href={socials.instagram} target="_blank"><img className='gitgggg' src="instagram.png" alt="" /></a>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
@@ -149,19 +163,27 @@ const MainBoardLists = props => {
                             <div className="IncardDiv">
                                 <div className="infoDiv">
                                     <p id='name'>  {dev.role} <div className='underline1'><div className='underline' ></div></div><h3 id='name'> {dev.name}</h3></p>
-                                    <h4>Persuing :{dev.course}</h4>
+                                    <h4>Persuing :{dev.persuing}</h4>
                                     <p>selected for</p>
                                     <h5>2024-25</h5>
-                                </div>
+                                </div>{
+                                    Object.values(member).map((socials, id) => (
+                                        <div className="ccard__button" key={id}>
+                                            
+                                            <a href={socials.github} target="_blank"><img className='gitgggg' src="git.png" alt="" /></a>
+                                            <a href={socials.linkedin} target="_blank"><img className='gitgggg' src="linkedin.png" alt="" /></a>
+                                            <a href={socials.twitter} target="_blank"><img className='gitgggg' src="twitter.png" alt="" /></a>
+                                            <a href={socials.instagram} target="_blank"><img className='gitgggg' src="instagram.png" alt="" /></a>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
 
             ))
         }
-        <div class="card">
-            <a href="#" class="card__button">Learn more</a>
-        </div>
+        
         {/* {Object.values(mainMemberData)===null ? (<h1>...</h1> ) : Object.values(mainMemberData).map((mainMem,id) => (
             mainMem.rolee === 'mem' ? ( null):( mainMem.rolee === 'dev' ? (
                 Object.values(mainMem).map((dev, id) => (

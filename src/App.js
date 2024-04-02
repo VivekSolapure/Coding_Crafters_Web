@@ -2,7 +2,6 @@ import Post from './components/navbar/Post'
 import Home from "./components/navbar/Home";
 import Navbar from "./components/navbar/Navbar";
 import Inbox from "./components/Inbox"
-import Test1 from "./components/Test1"
 import AddMember from './components/AddMember';
 import Bgv from "./sharing/bgv"
 import {
@@ -21,7 +20,12 @@ import Submit from './admin/components/Submit';
 import MemLists from './users/components/MemLists';
 import MainBoardLists from './users/components/MainBoardLists';
 import Mainboard from './admin/pages/GetMainboard';
-
+import LogIn from './sharing/Ketan_Login';
+import SignInn from './sharing/SignIn';
+import Gallery from './components/Gallery';
+import Fform from './sharing/Fform';
+import Logininfo from './sharing/Logininfo';
+import About from './sharing/About';
 
 function App() {
 
@@ -41,12 +45,17 @@ function App() {
             <Route path="/post/inbox" element={<Inbox />}>Inbox</Route>
             <Route path="/members" element={<Members />}>Members</Route>
             <Route path="/events" element={<Events />}>Events</Route>
-            <Route path="/test1" element={<Test1 />}>Test1</Route>
             <Route path="/test2aa" element={<Events />}>Test2aa</Route>
             <Route path="/addMember" element={<AddMember />}>AddMember</Route>
             <Route path="/authen" element={<Authen />}>Signup</Route>
             <Route path="/submit" element={<Submit />}>Submit</Route>
             <Route path="/mainMember" element={< Mainboard />}>Submit</Route>
+            <Route path="/gallery" element={< Gallery />}>Gallery</Route>
+            <Route path="/feedback" element={< Fform />}>Feedback</Route>
+            <Route path="/loginInfo" element={< Logininfo />}>Logininfo</Route>
+            <Route path="/aboutus" element={< About />}>About</Route>
+            <Route path="/authen/login" element={<LogIn/>}>SignIN</Route>
+            <Route path="/authen/signin" element={<SignInn/>}>SignIN</Route>
             {/* <Route path="/signup" element={<Signup />}>Signup</Route>
             <Route path="/login" element={<Login/>}>Signup</Route> */}
 
