@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react'
+import { createContext, useContext, useState } from 'react'
 import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { getDatabase, set, ref, get, } from 'firebase/database'
@@ -32,8 +32,14 @@ export const useFirebase = () => useContext(FirebaseContext)
 export const storage = getStorage();
 
 
+export const errorMessage=()=>{
+
+
+}
+
 export const FirebaseProvider = (props) => {
 
+    const [error, seterror] = useState('')
 
     const signupUserWithEamilandPassword = async (email, password) => {
         try {
@@ -42,19 +48,36 @@ export const FirebaseProvider = (props) => {
             })
 
         } catch (error) {
-            console.error("Error: ", error);
+            seterror(parseFirebaseErrorMessage(error.message));
         }
     }
-    const signUpWithGoogle = () => {
-        signInWithPopup(firebaseAuth, googleProvider)
+    const parseFirebaseErrorMessage = (errorMessage) => {
+        try{
+            const regex = /auth\/(.*)/; // Regular expression to extract the error code
+            const match = errorMessage.match(regex);
+            if (match && match.length > 1) {
+              return match[1].replace(')', ''); // Remove the closing parenthesis
+            } else {
+              return 'Unknown Error';
+            }
+        }catch(error){
+            console.error(error);
+        }
+        
+      };
+    const signUpWithGoogle = async () => {
+        try{
+            await signInWithPopup(firebaseAuth, googleProvider)
+        }catch(error){
+            seterror( parseFirebaseErrorMessage(error));
+        }
     }
 
     const LogInWithEmailAndPassword = async (eemail, ppassword) => {
         try {
             await signInWithEmailAndPassword(firebaseAuth, eemail, ppassword)
-                .then(value => (console.log("Login Sucess")))
-        } catch (error) {
-            console.log(console.error(error))
+        } catch (eerror) {
+            seterror(parseFirebaseErrorMessage(error.message));
         }
     }
 
@@ -65,7 +88,7 @@ export const FirebaseProvider = (props) => {
 
 
     return (
-        <FirebaseContext.Provider value={{ signupUserWithEamilandPassword, putData, signUpWithGoogle, LogInWithEmailAndPassword, database, storage }}>{props.children}</FirebaseContext.Provider>
+        <FirebaseContext.Provider value={{ signupUserWithEamilandPassword, putData, signUpWithGoogle, LogInWithEmailAndPassword, database, storage,error }}>{props.children}</FirebaseContext.Provider>
     )
 
 

@@ -68,14 +68,6 @@ const MainBoardLists = props => {
         fetchData();
 
     }, []);
-    // Object.values(mainMemberData).map(a => {
-    //     Object.values(a).map(b => {
-    //         console.log(b.github);
-    //     })
-    // })
-
-    // let aa= Object.values(member).split("_")
-    // console.log(aa);
 
     if (mainMemberData === 0) {
         return (
@@ -167,7 +159,7 @@ const MainBoardLists = props => {
                                     <p>selected for</p>
                                     <h5>2024-25</h5>
                                 </div>{
-                                    Object.values(member).map((socials, id) => (
+                                    Object.values(dev).map((socials, id) => (
                                         <div className="ccard__button" key={id}>
                                             
                                             <a href={socials.github} target="_blank"><img className='gitgggg' src="git.png" alt="" /></a>

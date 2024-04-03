@@ -54,7 +54,7 @@ function App() {
             <Route path="/feedback" element={< Fform />}>Feedback</Route>
             <Route path="/loginInfo" element={< Logininfo />}>Logininfo</Route>
             <Route path="/aboutus" element={< About />}>About</Route>
-            <Route path="/authen/login" element={<LogIn/>}>SignIN</Route>
+            <Route path="/authen/login" element={<Login/>}>SignIN</Route>
             <Route path="/authen/signin" element={<SignInn/>}>SignIN</Route>
             {/* <Route path="/signup" element={<Signup />}>Signup</Route>
             <Route path="/login" element={<Login/>}>Signup</Route> */}
